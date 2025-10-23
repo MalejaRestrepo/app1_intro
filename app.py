@@ -8,36 +8,48 @@ st.set_page_config(
     layout="centered",
 )
 
-# 🌈 Estilo visual personalizado (fondo degradado + fuente)
+# 🌈 Estilo visual personalizado (más contraste y legibilidad)
 page_style = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #f6d8ff 0%, #d8f1ff 100%);
-    color: #2d0033;
+    background: linear-gradient(180deg, #f9f9ff 0%, #eaf2ff 100%);
+    color: #1e2a44; /* azul oscuro para texto principal */
     font-family: 'Poppins', sans-serif;
 }
 
+/* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #7a0099;
+    color: #8b004f; /* rosado oscuro */
 }
 
+/* Botones */
 .stButton>button {
-    background-color: #eeb8ff;
-    color: #2d0033;
+    background-color: #ffd3e8; /* rosado pastel */
+    color: #3a0055; /* texto oscuro */
     border-radius: 10px;
     font-weight: bold;
     border: none;
     transition: 0.3s;
 }
-
 .stButton>button:hover {
-    background-color: #d48cff;
+    background-color: #ffb6d9;
     transform: scale(1.05);
 }
 
-.stSidebar {
-    background-color: #f3e5f5;
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #f5ecff;
+    color: #2a1d5c;
+}
+
+/* Cajas de texto, info y éxito */
+.stSuccess, .stInfo, .stWarning, .stTextInput, .stSelectbox {
+    color: #1e2a44 !important;
+}
+
+p, li {
+    color: #1e2a44;
 }
 </style>
 """
